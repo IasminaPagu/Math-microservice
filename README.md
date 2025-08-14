@@ -15,8 +15,11 @@ docker-compose up --build
 
 step3)Access services:
 API docs: http://localhost:8000/docs
+
 RabbitMQ UI: http://localhost:15672 (guest/guest)
+
 Prometheus: http://localhost:9090
+
 Grafana: http://localhost:3000 (admin/admin)
 
 ✅ Functionality Summary
