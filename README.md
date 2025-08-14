@@ -105,27 +105,43 @@ Container: Docker + Compose
 📁 Project Structure
 /app
   /controllers    # API routers (math, auth)
+  
   /services       # Business logic (math, db)
+  
   /models         # ORM models (User, OperationRequest)
+  
   /schemas        # Pydantic schemas
+  
   /utils          # Caching, messaging, security
+  
   /db             # Database engine/session setup
+  
   main.py         # FastAPI app entry point
+  
 
 /worker/worker.py # Async worker consuming from RabbitMQ
+
 /monitoring/      # Prometheus config & Grafana dashboard
+
 
 📋 Based on Project Requirements:
 
 This project fulfills all required and "nice to have" criteria from the homework brief:
 
 ✅ Mathematical operations exposed via API (not SOAP)
+
 ✅ Containerized using Docker Compose
+
 ✅ JWT authentication & user tracking
+
 ✅ Request persistence via SQLAlchemy + SQLite
+
 ✅ Bonus: logging via RabbitMQ queue (math_queue)
+
 ✅ Bonus: Redis caching and monitoring with Prometheus/Grafana
+
 ✅ MVCS architecture, extensible design
+
 
 
 
