@@ -20,8 +20,7 @@ RabbitMQ UI: http://localhost:15672 (guest/guest)
 
 Prometheus: http://localhost:9090
 
-Grafana: http://localhost:3000 (admin/admin)
-
+Grafana: http://localhost:3000 (admin/admin), you already have a pre-configured dashboard for FastAPI located at: proiect/monitoring/fastapi_grafana_dashboard. This dashboard displays:Total HTTP requests,Request counts per endpoint,Average request duration, Response status code distribution (pie chart)
 ✅ Functionality Summary
 
 🔐 Authentication & Authorization:
