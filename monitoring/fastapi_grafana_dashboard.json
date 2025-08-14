@@ -1,0 +1,57 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "FastAPI Monitoring",
+    "timezone": "browser",
+    "panels": [
+      {
+        "type": "stat",
+        "title": "Total HTTP Requests",
+        "targets": [
+          {
+            "expr": "sum(http_requests_total)",
+            "refId": "A"
+          }
+        ],
+        "gridPos": { "x": 0, "y": 0, "w": 6, "h": 4 }
+      },
+      {
+        "type": "graph",
+        "title": "Requests per Endpoint (last 5m)",
+        "targets": [
+          {
+            "expr": "sum by (path) (rate(http_requests_total[5m]))",
+            "refId": "A"
+          }
+        ],
+        "gridPos": { "x": 6, "y": 0, "w": 12, "h": 8 }
+      },
+      {
+        "type": "graph",
+        "title": "Request Duration Avg (last 5m)",
+        "targets": [
+          {
+            "expr": "rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds_count[5m])",
+            "refId": "A"
+          }
+        ],
+        "gridPos": { "x": 0, "y": 8, "w": 12, "h": 8 }
+      },
+      {
+        "type": "piechart",
+        "title": "HTTP Response Codes",
+        "targets": [
+          {
+            "expr": "sum by (status) (rate(http_requests_total[5m]))",
+            "refId": "A"
+          }
+        ],
+        "gridPos": { "x": 12, "y": 8, "w": 12, "h": 8 }
+      }
+    ],
+    "schemaVersion": 30,
+    "version": 1,
+    "refresh": "5s"
+  },
+  "overwrite": true
+}

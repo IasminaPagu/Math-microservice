@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+python-dotenv
+redis
+loguru
+python-jose
+prometheus-fastapi-instrumentator
+passlib[bcrypt]==1.7.4
+bcrypt==3.2.0
+email-validator
+python-multipart
+aio-pika
+redis
+
+

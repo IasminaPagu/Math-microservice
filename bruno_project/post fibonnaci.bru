@@ -1,0 +1,29 @@
+meta {
+  name: post fibonnaci
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8000/math/fibonacci
+  body: json
+  auth: bearer
+}
+
+params:query {
+  : 
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiYmIiLCJpYXQiOjE3NTUxNzk5ODksImV4cCI6MTc1NTE4MDg4OX0.k5p2AkW2Sxv-sTJ_bejZwwNvxVYr0u1q3_uk2zGhZy0
+}
+
+body:json {
+  {
+    "n" : 7
+  }
+}
+
+settings {
+  encodeUrl: true
+}

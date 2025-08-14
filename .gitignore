@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.db
+.env
+.vscode/
+.idea/
+venv/
+*.sqlite3
+*.log
+data/
+monitoring/prometheus.yml  # doar dacă nu vrei să îl urci
