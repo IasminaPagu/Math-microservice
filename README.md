@@ -25,49 +25,82 @@ Grafana: http://localhost:3000 (admin/admin)
 ✅ Functionality Summary
 
 🔐 Authentication & Authorization:
+
 User registration and login
+
 JWT token-based authentication
+
 Role-based access (admin, user)
+
 
 🧮 Math Endpoints:
 /math/pow – power function
+
 /math/factorial – factorial function
+
 /math/fibonacci – computes the nth Fibonacci number
 
+
 ⚡ Fibonacci Optimized:
+
 Implemented using Matrix Exponentiation
+
 Time Complexity: O(log n) with exponentiation by squaring
+
 Auxiliary Space: O(log n) due to recursion stack
 
+
 💾 Data Persistence:
+
 All requests are saved in operation_requests table
+
 Each request is associated with the user_id of the authenticated user
 
+
 💬 Asynchronous Logging:
+
 All requests are sent to RabbitMQ (math_queue)
+
 A background worker consumes messages and saves to SQLite DB
 
+
 🔁 Caching with Redis:
+
 Results are cached per operation (power, factorial, Fibonacci)
+
 Cache keys are based on input parameters (e.g. fibonacci:100)
+
 Time-to-live for each cached value is configurable (default 1h)
 
+
 📊 Monitoring & Observability:
+
 Prometheus collects metrics from /metrics
+
 Grafana displays dashboards (requests count, duration, status codes)
 
+
 🐳 Full Containerization:
+
 FastAPI app, worker, Redis, RabbitMQ, Prometheus, Grafana are all Dockerized
+
 
 🧠 Technologies & Structure
 
 Backend: FastAPI (async), SQLAlchemy (ORM), Pydantic (validation)
+
 Database: SQLite
+
 Cache: Redis
+
 Queue: RabbitMQ + aio-pika
+
 Monitoring: Prometheus + Grafana
+
 Auth: JWT (python-jose)
+
 Container: Docker + Compose
+
 
 📁 Project Structure
 /app
