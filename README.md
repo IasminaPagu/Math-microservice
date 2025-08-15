@@ -7,13 +7,17 @@ A FastAPI-based microservice for authenticated users to perform mathematical ope
 🚀 How to Run the Application
 
 step 1)Clone the repository
+
 git clone <repo-url>
+
 cd proiect
 
 step 2)Start everything with Docker Compose
+
 docker-compose up --build
 
 step3)Access services:
+
 API docs: http://localhost:8000/docs
 
 RabbitMQ UI: http://localhost:15672 (guest/guest)
